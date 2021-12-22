@@ -1,0 +1,32 @@
+/* box dimensions */
+#box-dimensions {
+    height: 300px;
+    width: 300px;
+    background-color: #bbbbaa;}
+#post-box {
+    height: 75%;
+    width: 75%;
+    background-color: #e753bb;}
+
+/* overflowing content */
+p.one {
+    overflow: hidden;}
+p.two {
+    overflow: scroll;}
+
+/* border, padding, margin */
+.BMP {
+    text-align: center;}
+.post-BPM {
+    width: 200px;
+    border: 2px solid #0088dd;
+    padding: 10px;}
+#example {
+    margin: 20px}
+
+/* display */
+li {
+    display: inline;
+    margin-right: 10px;}
+li.coming-soon {
+    display: none;}
