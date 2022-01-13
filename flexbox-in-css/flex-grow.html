@@ -1,0 +1,66 @@
+<head>
+    <title>Flex Grow</title>
+    <style>
+        .box1, .box2, .box3 {
+            display: flex;
+        }
+    
+        .box-item1, .box-item2, .box-item3, .box-item4, .box-item5, .box-item6, .box-item7, .box-item8, .box-item9 {
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        .box-item1 {
+            background-color: aquamarine;
+            flex-grow: 0;
+        }
+        .box-item2 {
+            background-color: blueviolet;
+        }
+        .box-item3 {
+            background-color: coral;
+        }
+        .box-item4 {
+            background-color: aquamarine;
+            flex-grow: 1;
+        }
+        .box-item5 {
+            background-color: blueviolet;
+        }
+        .box-item6 {
+            background-color: coral;
+        }
+        .box-item7 {
+            background-color: aquamarine;
+            flex-grow: 1;
+        }
+        .box-item8 {
+            background-color: blueviolet;
+            flex-grow: 2;
+        }
+        .box-item9 {
+            background-color: coral;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+  
+<body>
+    <div class="box1">
+      <div class="box-item1">Target</div>
+      <div class="box-item2">Item</div>
+      <div class="box-item3">Item</div>
+    </div>
+    <br>
+    <div class="box2">
+      <div class="box-item4">Target</div>
+      <div class="box-item5">Item</div>
+      <div class="box-item6">Item</div>
+    </div>
+    <br>
+    <div class="box3">
+      <div class="box-item7">Target</div>
+      <div class="box-item8">Item</div>
+      <div class="box-item9">Item</div>
+    </div>
+</body>

@@ -1,0 +1,67 @@
+<head>
+    <title>Flex Grow</title>
+    <style>
+        .box1, .box2, .box3 {
+            display: flex;
+            width: 250px;
+            background-color: darkgreen;
+            flex-flow: nowrap;
+            padding: 10px;
+        }
+    
+        .box-item1, .box-item2, .box-item3, .box-item4, .box-item5, .box-item6, .box-item7, .box-item8, .box-item9 {
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        .box-item1 {
+            background-color: aquamarine;
+            flex-shrink: 1;
+        }
+        .box-item2 {
+            background-color: blueviolet;
+        }
+        .box-item3 {
+            background-color: coral;
+        }
+        .box-item4 {
+            background-color: aquamarine;
+            flex-shrink: 0;
+        }
+        .box-item5 {
+            background-color: blueviolet;
+        }
+        .box-item6 {
+            background-color: coral;
+        }
+        .box-item7 {
+            background-color: aquamarine;
+            width: 100%;
+        }
+        .box-item8 {
+            background-color: blueviolet;
+        }
+        .box-item9 {
+            background-color: coral;
+        }
+    </style>
+</head>  
+<body>
+    <div class="box1">
+      <div class="box-item1">This is the flex-shrink target</div>
+      <div class="box-item2">Foo bar</div>
+      <div class="box-item3">Lorem ipsum</div>
+    </div>
+    <br>
+    <div class="box2">
+      <div class="box-item4">This is the flex-shrink target</div>
+      <div class="box-item5">Foo bar</div>
+      <div class="box-item6">Lorem ipsum</div>
+    </div>
+    <br>
+    <div class="box3">
+      <div class="box-item7">Width</div>
+      <div class="box-item8">Shrink</div>
+      <div class="box-item9">Shrink</div>
+    </div>
+</body>

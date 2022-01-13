@@ -1,0 +1,35 @@
+<head>
+    <style>
+        .box {
+            display: flex;
+        }
+        .box-item1, .box-item2, .box-item3, .box-item4 {
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .box-item1 {
+            background-color: cyan;
+            order: 13;
+        }
+        .box-item2 {
+            background-color: cyan;
+            order: -7;
+        }
+        .box-item3 {
+            background-color: darkorchid;
+            order: 9;
+        }
+        .box-item4 {
+            background-color: gold;
+            order: 5;
+        }
+    </style>
+  </head>
+<body>
+    <div class="box">
+      <div class="box-item1">One order: 13</div>
+      <div class="box-item2">Two order: -7</div>
+      <div class="box-item3">Target order: 9</div>
+      <div class="box-item4">Four order: 5</div>
+    </div>
+</body>
