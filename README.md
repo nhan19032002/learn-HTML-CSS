@@ -1,57 +1,78 @@
-# Install and run the program
+## Set up
 
-Clone project
+**Trước tiên, bạn cần phỉa cài đặt [NodeJS](https://nodejs.org/), [Yarn](https://yarnpkg.com/)**
+
+Sau đó làm theo các bước:
+
+#### Step 1:
+
+` git clone https://github.com/SiVi-Code/source-market-be.git` - Clone dự án
+
+#### Step 2: 
+
+`cd source-market-be` - Truy cập project files
+
+#### Step 3: 
+
+`yarn` (or `npm install`) - install dependencies
+
+#### Step 4:
+
+Tạo file `.env` ở thư mục gốc của dự án và thêm
+
 ```
-> $ git clone https://github.com/SiVi-Code/source-market-fe.git
+# ===============================
+# = GENERAL
+# ===============================
+PORT=8000
+NODE_ENV=dev
+JWT_SECRET=test
+JWT_EXPIRES_IN_HOUR=24h
+
+CLIENT_URL=http://localhost:8080
+SERVER_URL=http://localhost:3000
+SWAGGER_URL=http://localhost:3000/api/v1
+
+# ===============================
+# = DATABASE MYSQL
+# ===============================
+DB_HOST_MYSQL=db4free.net
+DB_PORT_MYSQL=3306
+DB_USERNAME_MYSQL=db_sellsource
+DB_NAME_MYSQL=db_sellsource
+DB_PASSWORD_MYSQL=db_sellsource
+DB_LOGGING=DISABLED
+
+# ===============================
+# = SEEDING
+# ===============================
+TYPEORM_SEEDING_FACTORIES=dist/database/factories/*.js
+TYPEORM_SEEDING_SEEDS=dist/database/seeds/*.js
+
+# ===============================
+# = LOGGER
+# ===============================
+LOGGER_CONSOLE_SILENT=true
+LOGGER_MAX_SIZE_SILENT=false
+LOGGER_MAX_SIZE_PATH=logs/logs_size/logs.log
+LOGGER_DAILY_SILENT=false
+LOGGER_DAILY_PATH=logs/logs_daily/logs-%DATE%.log
+LOGGER_DAILY_PATTERN=YYYY-MM-DD-HH
+
+# ===============================
+# = GOOGLE
+# ===============================
+GOOGLE_CLIENT_ID=978594913614-d38725tm2i7djnkslpo6om6rujkt4js9.apps.googleusercontent.com
+GOOGLE_SECRET=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
+
+# ===============================
+# = CORS
+# ===============================
+CORS_ALLOWED_URL=https://source-market-api-im6m.onrender.com,https://source-market-call-api-from-local.onrender.com,http://localhost:3000,http://localhost:8080
+
+# ===============================
+# = FACEBOOK
+# ===============================
+FACEBOOK_CLIENT_ID=2815325912026613
+FACEBOOK_SECRET=69a4710b2367c51fe592c58e3c83e829
 ```
-
-Enter the react directory and server directory to install dependency packages
-```
-> $ npm install
-```
-Start the background service in the server directory
-```
-> $ npm run start
-```
-After executing the `npm run start` command, open the browser `http://localhost:8080/` to run the project, the background service port is `3000`
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
